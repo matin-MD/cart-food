@@ -14,7 +14,7 @@ function Navbar() {
           </li>
         </ul>
         <div>
-          <button className=" flex items-center text-center border bg-neutral-700 border-neutral-500 hover:bg-neutral-900 p-1 rounded-md ">
+          <button className=" flex items-center text-center border bg-neutral-700 border-neutral-500 hover:bg-neutral-950 p-1 rounded-md ">
             <span className="mx-1">
               <FaCartShopping />
             </span>
