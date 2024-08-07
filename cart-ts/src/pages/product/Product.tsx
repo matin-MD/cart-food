@@ -13,8 +13,8 @@ function Product() {
             </p>
             <div className="pr-4 pb-2">نامحصول</div>
             <span className=" pr-4">قیمت: $22</span>
-            <div className="grid justify-center ">
-              <button className="grid justify-center rounded-md text-lg py-2 px-10  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-300 bg-blue-900  items-center place-content-center">
+            <div className="grid justify-center mb-5">
+              <button className="grid justify-center rounded-md text-xl py-2 px-10  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center">
                 click
               </button>
             </div>
