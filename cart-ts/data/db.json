@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": " title 1",
+      "price": 100,
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+    },
+    {
+      "id": "2",
+      "title": " title 2",
+      "price": 200,
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+    },
+    {
+      "id": "3",
+      "title": " title 3",
+      "price": 300,
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+    },
+    {
+      "id": "4",
+      "title": " title 4",
+      "price": 400,
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+    }
+  ]
+}
+    
