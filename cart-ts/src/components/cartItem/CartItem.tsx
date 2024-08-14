@@ -4,7 +4,7 @@ function CartItem() {
       <div className="py-5">
         <div className=" w-60  flex flex-row-reverse justify-center  text-white ">
           <img
-            className="rounded-md"
+            className="rounded-md "
             src="src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
             alt=""
           />
