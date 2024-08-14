@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../services/api";
 import { IProducts } from "../../types/server";
+import { useShoppingCartContext } from "../../context/ShoppingCartContext";
 
 function Product() {
   const params = useParams<{ id: string }>();
   const [product, setProduct] = useState<IProducts>();
-
+  const {cartItems} = useShoppingCartContext();
   useEffect(() => {
-    getProduct(params.id as string).then((data) => {
-      setProduct(data);
+    getProduct(params.id as string).then((result) => {
+      setProduct(result);
     });
   }, []);
 
@@ -39,3 +40,4 @@ function Product() {
 }
 
 export default Product;
+  

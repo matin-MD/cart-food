@@ -5,7 +5,7 @@ function CartItem() {
         <div className=" w-60  flex flex-row-reverse justify-center  text-white ">
           <img
             className="rounded-md "
-            src="src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+            src="src/assets/images/whalter.jpg"
             alt=""
           />
           <div className="grid text-center pr-10">
