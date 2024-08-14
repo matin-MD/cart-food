@@ -2,28 +2,31 @@
   "products": [
     {
       "id": "1",
-      "title": " title 1",
+      "title": "breakingk bad",
       "price": 100,
-      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg",
+      "description": "breakink bad is a series about Walter White"
     },
     {
       "id": "2",
-      "title": " title 2",
+      "title": "breakingk bad",
       "price": 200,
-      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg",
+      "description": "breakink bad is a series about Walter White"
     },
     {
       "id": "3",
-      "title": " title 3",
+      "title": "breakingk bad",
       "price": 300,
-      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg",
+      "description": "breakink bad is a series about Walter White"
     },
     {
       "id": "4",
-      "title": " title 4",
+      "title": "breakingk bad",
       "price": 400,
-      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg"
+      "image": "src/assets/images/Screenshot_20230624_215528_BolBol Jan.jpg",
+      "description": "breakink bad is a series about Walter White"
     }
   ]
 }
-    

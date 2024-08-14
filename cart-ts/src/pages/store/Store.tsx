@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import ProductItem from "../../components/productItem/ProductItem";
 import { useEffect, useState } from "react";
 import { getProducts } from "../../services/api";
+import { IProducts } from "../../types/server";
 function Store() {
-  const [product, setProduct] = useState([]);
+  const [product, setProduct] = useState<IProducts[]>([]);
   useEffect(() => {
     getProducts().then((result) => {
       setProduct(result);
@@ -16,8 +17,8 @@ function Store() {
       </p>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4  gap-5   px-28">
         {product.map((item) => (
-          <Link key={item?.id} to={`/product/${1}`} className="pb-10">
-            <ProductItem />
+          <Link key={item?.id} to={`/product/${item.id}`} className="pb-10">
+            <ProductItem {...item} />
           </Link>
         ))}
       </div>
