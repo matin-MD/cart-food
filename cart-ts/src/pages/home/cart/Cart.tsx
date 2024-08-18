@@ -3,22 +3,22 @@ import { useShoppingCartContext } from "../../../context/ShoppingCartContext";
 function Cart() {
   const { cartItems } = useShoppingCartContext();
   return (
-    <div>
+    <>
       <div className="grid place-content-center justify-center py-5">
-        <div className="border-b w-96 grid justify-center">
+        <div className="border-b w-96 grid justify-center hover:bg-neutral-800 hover:rounded-md ">
           <CartItem />
         </div>
-        <div className="border-b w-96 grid justify-center">
+        <div className="border-b w-96 grid justify-center hover:bg-neutral-800 hover:rounded-md ">
           <CartItem />
         </div>
-        <div className="border-b w-96 grid justify-center">
+        <div className="border-b w-96 grid justify-center hover:bg-neutral-800 hover:rounded-md ">
           <CartItem />
         </div>
-        <div className=" w-96 grid justify-center">
+        <div className=" w-96 grid justify-center hover:bg-neutral-800 hover:rounded-md ">
           <CartItem />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

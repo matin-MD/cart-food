@@ -1,8 +1,8 @@
 function CartItem() {
   return (
-    <>
-      <div className="py-5">
-        <div className=" w-60  flex flex-row-reverse justify-center  text-white ">
+    <div className="">
+      <div className="py-5  ">
+        <div className=" w-60 px-5 flex flex-row-reverse justify-center  text-white ">
           <img
             className="rounded-md "
             src="src/assets/images/whalter.jpg"
@@ -30,7 +30,7 @@ function CartItem() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
