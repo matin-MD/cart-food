@@ -1,7 +1,5 @@
 import CartItem from "../../../components/cartItem/CartItem";
-import { useShoppingCartContext } from "../../../context/ShoppingCartContext";
 function Cart() {
-  const { cartItems } = useShoppingCartContext();
   return (
     <>
       <div className="grid place-content-center justify-center py-5">

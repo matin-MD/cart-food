@@ -3,11 +3,10 @@ import { useParams } from "react-router-dom";
 import { getProduct } from "../../services/api";
 import { IProducts } from "../../types/server";
 import { useShoppingCartContext } from "../../context/ShoppingCartContext";
-
 function Product() {
   const params = useParams<{ id: string }>();
   const [product, setProduct] = useState<IProducts>();
-  const { handleIncreaseProductQty, cartItems } = useShoppingCartContext();
+  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItems } =useShoppingCartContext();
   useEffect(() => {
     getProduct(params.id as string).then((result) => {
       setProduct(result);
@@ -28,12 +27,20 @@ function Product() {
               <div className="grid justify-center mb-5">
                 <div className="pt-3">
                   <button
-                    onClick={() =>
-                      handleIncreaseProductQty(parseInt(params.id as string))
-                    }
+                    onClick={() => {
+                      handleIncreaseProductQty(parseInt(params.id as string));
+                    }}
                     className="grid justify-center rounded-md text-xl  py-2 px-10  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center"
                   >
-                    Add to cart
+                    Add . . .
+                  </button>{" "}
+                  <button
+                    onClick={() => {
+                      handleDecreaseProductQty(parseInt(params.id as string));
+                    }}
+                    className="grid justify-center rounded-md text-xl  py-2 px-10  shadow-red-200 shadow-sm hover:shadow-md hover:shadow-red-100 bg-red-600  hover:bg-red-500 items-center place-content-center"
+                  >
+                    Remove . . .
                   </button>
                 </div>
               </div>
