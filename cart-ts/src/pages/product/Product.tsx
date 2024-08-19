@@ -6,7 +6,12 @@ import { useShoppingCartContext } from "../../context/ShoppingCartContext";
 function Product() {
   const params = useParams<{ id: string }>();
   const [product, setProduct] = useState<IProducts>();
-  const { handleIncreaseProductQty, handleDecreaseProductQty, cartItems } =useShoppingCartContext();
+  const {
+    handleIncreaseProductQty,
+    handleDecreaseProductQty,
+    getProductQty,
+    cartItems,
+  } = useShoppingCartContext();
   useEffect(() => {
     getProduct(params.id as string).then((result) => {
       setProduct(result);
@@ -33,7 +38,10 @@ function Product() {
                     className="grid justify-center rounded-md text-xl  py-2 px-10  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center"
                   >
                     Add . . .
-                  </button>{" "}
+                  </button>
+                  <span>
+                    {getProductQty(parseInt(params.id as string))}
+                  </span>
                   <button
                     onClick={() => {
                       handleDecreaseProductQty(parseInt(params.id as string));
