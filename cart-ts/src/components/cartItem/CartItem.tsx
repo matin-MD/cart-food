@@ -1,24 +1,34 @@
-function CartItem() {
+import { useEffect, useState } from "react";
+import { getProduct } from "../../services/api";
+import { IProducts } from "../../types/server";
+
+interface CartItem {
+  id: number;
+  qty: number;
+}
+function CartItem({ id, qty }: CartItem) {
+  const [product, setProduct] = useState<IProducts>();
+  useEffect(() => {
+    getProduct(id).then((data) => {
+      setProduct(data);
+    });
+  }, []);
   return (
     <div className="">
       <div className="py-5  ">
-        <div className=" w-60 px-5 flex flex-row-reverse justify-center  text-white ">
-          <img
-            className="rounded-md "
-            src="src/assets/images/whalter.jpg"
-            alt=""
-          />
+        <div className=" w-96 px-5  flex flex-row-reverse justify-center  text-white ">
+          <img className="rounded-md " src={product?.image} />
           <div className="grid text-center pr-10">
             <div className="grid justify-center">
-              <p>نام</p>
-              <span>قیمت</span>
+              <p>{product?.title}</p>
+              <span>{product?.price}</span>
             </div>
             <div>
               <div className="flex justify-center py-2 ">
                 <button className=" w-8 h-8 bg-green-600 hover:bg-green-500 rounded-md ">
                   +
                 </button>
-                <span className="mx-2 grid  items-center">0</span>
+                <span className="mx-2 grid  items-center">{qty}</span>
                 <button className=" w-8 h-8 bg-red-600 hover:bg-red-500 rounded-md">
                   -
                 </button>

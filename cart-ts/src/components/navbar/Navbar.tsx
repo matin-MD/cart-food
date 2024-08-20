@@ -16,7 +16,7 @@ function Navbar() {
         </ul>
         <Link to="/cart">
           <button className=" flex items-center text-center border bg-neutral-700 border-neutral-500 hover:bg-neutral-950 p-1 rounded-md ">
-            <span className="pl-2 bg-red-600 rounded-full px-2 text-center justify-center ">{cartQty !== 0 ? cartQty : " خالی است"}</span>
+            <span className="pl-2 bg-teal-400 text-black text-lg rounded-md px-2 text-center justify-center ">{cartQty !== 0 ? cartQty : " خالی است"}</span>
             <i className="mx-2">
               <FaCartShopping />
             </i>
