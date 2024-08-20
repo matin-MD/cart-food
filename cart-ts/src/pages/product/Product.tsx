@@ -11,6 +11,7 @@ function Product() {
     handleDecreaseProductQty,
     getProductQty,
     cartItems,
+    handleRemoveProduct,
   } = useShoppingCartContext();
   useEffect(() => {
     getProduct(params.id as string).then((result) => {
@@ -23,7 +24,7 @@ function Product() {
     <>
       <div className="grid justify-center items-center content-center pt-28 ">
         <div className="transition rounded-lg ">
-          <div className="transition-all  text-right pb-2 border-2 hover:border-2 border-neutral-700 hover:text-white text-white hover:border-neutral-900  bg-neutral-700  hover:bg-black active:bg-neutral-700 rounded-lg ">
+          <div className="transition-all  text-right pb-2 border-2 hover:border-2 border-neutral-700 hover:text-white text-white hover:border-neutral-900  bg-neutral-700  hover:bg-black  rounded-lg ">
             <img src={product?.image} className="h-52  rounded-t-lg " />
             <div className="text-left pl-2 mx-5">
               <div className="pt-3 ">{product?.title}</div>
@@ -31,25 +32,61 @@ function Product() {
               <div className="pt-3 pr-4">قیمت: ${product?.price}</div>
               <div className="grid justify-center mb-5">
                 <div className="pt-3">
-                  <button
-                    onClick={() => {
-                      handleIncreaseProductQty(parseInt(params.id as string));
-                    }}
-                    className="grid justify-center rounded-md text-xl  py-2 px-10  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center"
-                  >
-                    Add . . .
-                  </button>
                   <span>
-                    {getProductQty(parseInt(params.id as string))}
+                    {getProductQty(parseInt(params.id as string)) === 0 ? (
+                      <button
+                        onClick={() => {
+                          handleIncreaseProductQty(
+                            parseInt(params.id as string)
+                          );
+                        }}
+                        className="grid justify-center rounded-md text-xl py-2 px-10 shadow-green-200 shadow-sm hover:shadow-md hover:shadow-green-100 bg-green-700  hover:bg-green-600 items-center place-content-center"
+                      >
+                        Add to Cart
+                      </button>
+                    ) : (
+                      <>
+                        <div className="grid grid-cols-3">
+                          <button
+                            onClick={() => {
+                              handleIncreaseProductQty(
+                                parseInt(params.id as string)
+                              );
+                            }}
+                            className="grid justify-center rounded-md text-xl  py-2 px-5  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center"
+                          >
+                            +
+                          </button>
+                          <span className="grid place-content-center">
+                            {getProductQty(parseInt(params.id as string))}
+                          </span>
+
+                          <button
+                            onClick={() => {
+                              handleDecreaseProductQty(
+                                parseInt(params.id as string)
+                              );
+                            }}
+                            className="grid justify-center rounded-md text-xl  py-2 px-5  shadow-red-200 shadow-sm hover:shadow-md hover:shadow-red-100 bg-red-700  hover:bg-red-600 items-center place-content-center"
+                          >
+                            -
+                          </button>
+                        </div>
+                        <div className="grid grid-cols-1 pt-3">
+                          <button
+                            onClick={() => {
+                              handleRemoveProduct(
+                                parseInt(params.id as string)
+                              );
+                            }}
+                            className="grid justify-center  rounded-md text-xl  py-2 px-5  shadow-yellow-200 shadow-sm hover:shadow-md hover:shadow-yellow-100 bg-yellow-500  hover:bg-yellow-400 items-center place-content-center"
+                          >
+                            delete
+                          </button>
+                        </div>
+                      </>
+                    )}
                   </span>
-                  <button
-                    onClick={() => {
-                      handleDecreaseProductQty(parseInt(params.id as string));
-                    }}
-                    className="grid justify-center rounded-md text-xl  py-2 px-10  shadow-red-200 shadow-sm hover:shadow-md hover:shadow-red-100 bg-red-600  hover:bg-red-500 items-center place-content-center"
-                  >
-                    Remove . . .
-                  </button>
                 </div>
               </div>
             </div>
