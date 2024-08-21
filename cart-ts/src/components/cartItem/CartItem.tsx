@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProduct } from "../../services/api";
 import { IProducts } from "../../types/server";
+import { Link } from "react-router-dom";
 
 interface CartItem {
   id: number;
@@ -14,10 +15,13 @@ function CartItem({ id, qty }: CartItem) {
     });
   }, []);
   return (
-    <div className="">
-      <div className="py-5  ">
+    <>
+      <div className="py-5 px-28">
         <div className=" w-96 px-5  flex flex-row-reverse justify-center  text-white ">
-          <img className="rounded-md " src={product?.image} />
+          <Link to={`/product/${id}`}>
+            <img className="rounded-md hover:border-white " src={product?.image} />
+          </Link>
+
           <div className="grid text-center pr-10">
             <div className="grid justify-center">
               <p>{product?.title}</p>
@@ -40,7 +44,7 @@ function CartItem({ id, qty }: CartItem) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
