@@ -24,7 +24,49 @@
     {
       "id": "4",
       "title": "breakingk bad",
-      "price": 400,
+      "price": 500,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "5",
+      "title": "breakingk bad",
+      "price": 4600,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "6",
+      "title": "breakingk bad",
+      "price": 4400,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "7",
+      "title": "breakingk bad",
+      "price": 4003,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "8",
+      "title": "breakingk bad",
+      "price": 6400,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "9",
+      "title": "breakingk bad",
+      "price": 4700,
+      "image": "/src/assets/images/whalter.jpg",
+      "description": "breakink bad is a series about Walter White"
+    },
+    {
+      "id": "10",
+      "title": "breakingk bad",
+      "price": 1400,
       "image": "/src/assets/images/whalter.jpg",
       "description": "breakink bad is a series about Walter White"
     }

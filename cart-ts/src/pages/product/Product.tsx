@@ -57,7 +57,7 @@ function Product() {
                           >
                             +
                           </button>
-                          <span className="grid place-content-center">
+                          <span className="grid place-content-center text-xl">
                             {getProductQty(parseInt(params.id as string))}
                           </span>
 
