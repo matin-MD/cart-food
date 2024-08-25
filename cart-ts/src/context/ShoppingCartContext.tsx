@@ -1,5 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
+import { login } from "../services/api";
 
 interface IShoppingCartProvider {
   children: React.ReactNode;
@@ -16,9 +17,9 @@ interface IShoppingCartContext {
   getProductQty: (id: number) => number;
   handleRemoveProduct: (id: number) => void;
   cartQty: number;
-  isLogin:boolean
-  handleLogin:()=>void
-  handleLogout:()=>void
+  isLogin: boolean;
+  handleLogin: () => void;
+  handleLogout: () => void;
 }
 
 export const ShoppingCartContext = createContext({} as IShoppingCartContext);
@@ -79,14 +80,26 @@ export function ShoppingCartProvider({ children }: IShoppingCartProvider) {
 
   const cartQty = cartItems.reduce((totalQty, item) => totalQty + item.qty, 0);
 
-const [isLogin,setIsLogin]=useState(false)
+  const [isLogin, setIsLogin] = useState(false);
 
-const handleLogin=()=>{
-  setIsLogin(true)
-}
-const handleLogout=()=>{
-  setIsLogin(false)
-}
+  const handleLogin = () => {
+    login("matin", "mrmd").finally(() => {
+      let token =
+        "buwhidh82jhhjdadjwiqap0jdoipwqopdjmsnkljnankndwnqiadbgfvcvgfv9282";
+      localStorage.setItem("token", token);
+      setIsLogin(true);
+    });
+  };
+  const handleLogout = () => {
+    setIsLogin(false);
+  };
+
+  useEffect(() => {
+    let token = localStorage.getItem("token");
+    if (token) {
+      setIsLogin(true);
+    }
+  }, []);
 
   return (
     <ShoppingCartContext.Provider
@@ -99,7 +112,7 @@ const handleLogout=()=>{
         cartQty,
         isLogin,
         handleLogin,
-        handleLogout
+        handleLogout,
       }}
     >
       {children}
