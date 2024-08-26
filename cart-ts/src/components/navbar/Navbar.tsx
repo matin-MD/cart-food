@@ -16,12 +16,11 @@ function Navbar() {
         </ul>
         <div className="flex">
           <button
-            className="mr-5 px-2 py-1 rounded-md bg-neutral-700 border-red-600 border-2 hover:bg-red-900"
+            className="mr-5 text-red-600 hover:text-white px-2 py-1 rounded-md bg-neutral-700 border-red-600 border-2 hover:bg-red-600"
             onClick={handleLogout}
           >
             LogOut
           </button>
-
           <Link to="/cart">
             <button className=" flex items-center text-center border bg-neutral-700 border-neutral-500 hover:bg-neutral-950 p-1 rounded-md ">
               <span className="pl-2 bg-teal-400 text-black text-lg rounded-md px-2 text-center justify-center ">
