@@ -2,21 +2,19 @@ import { ChangeEvent, useState } from "react";
 import { useShoppingCartContext } from "../../context/ShoppingCartContext";
 
 function Login() {
+  const { handleLogin } = useShoppingCartContext();
 
-  const{handleLogin}=useShoppingCartContext()
-
-
-const[user,setUser]=useState({
-  username:"",
-  password:"",
-})
-const handleChange =(e:ChangeEvent<HTMLInputElement>)=>{
-
-  const{name,value}=e.target
-  setUser({
-    ...user,[name]:value
-  })
-}
+  const [user, setUser] = useState({
+    username: "",
+    password: "",
+  });
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
 
   return (
     <div className="flex items-center justify-center h-screen place-content-center pb-40 ">
@@ -39,9 +37,10 @@ const handleChange =(e:ChangeEvent<HTMLInputElement>)=>{
         />
         <div className="grid place-content-center">
           <button
-          onClick={()=>handleLogin(user.username,user.password)}
+            onClick={() => handleLogin(user.username, user.password)}
             className="bg-white max-w-fit px-10 py-2 justify-center flex items-center place-content-center mt-5 rounded  "
-          >ورود
+          >
+            ورود
           </button>
         </div>
       </div>

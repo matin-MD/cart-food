@@ -8,9 +8,9 @@ import { ShoppingCartProvider } from "./context/ShoppingCartContext.tsx";
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
-    <ShoppingCartProvider>
-      <App />
-    </ShoppingCartProvider>
+      <ShoppingCartProvider>
+        <App />
+      </ShoppingCartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

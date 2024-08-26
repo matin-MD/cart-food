@@ -19,7 +19,7 @@ interface IShoppingCartContext {
   handleRemoveProduct: (id: number) => void;
   cartQty: number;
   isLogin: boolean;
-  handleLogin: (username:string,password:string) => void;
+  handleLogin: (username: string, password: string) => void;
   handleLogout: () => void;
 }
 
@@ -83,27 +83,27 @@ export function ShoppingCartProvider({ children }: IShoppingCartProvider) {
 
   const [isLogin, setIsLogin] = useState(false);
 
-const navigate=useNavigate()
+  const navigate = useNavigate();
 
-  const handleLogin = (username:string,password:string) => {
+  const handleLogin = (username: string, password: string) => {
     login(username, password).finally(() => {
       let token =
         "buwhidh82jhhjdadjwiqap0jdoipwqopdjmsnkljnankndwnqiadbgfvcvgfv9282";
       localStorage.setItem("token", token);
       setIsLogin(true);
-      navigate("/cart")
+      navigate("/cart");
     });
   };
   const handleLogout = () => {
     setIsLogin(false);
-    navigate("/login")
-    localStorage.removeItem("token")
+    navigate("/login");
+    localStorage.removeItem("token");
   };
 
   useEffect(() => {
-    let token=localStorage.getItem("token")
-    if(token){
-      setIsLogin(true)
+    let token = localStorage.getItem("token");
+    if (token) {
+      setIsLogin(true);
     }
   }, []);
 
