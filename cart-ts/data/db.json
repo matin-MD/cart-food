@@ -2,73 +2,73 @@
   "products": [
     {
       "id": "1",
-      "title": "breakingk bad",
+      "title": "Fried chicken",
       "price": 100,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/1.webp",
+      "description": "fast food..."
     },
     {
       "id": "2",
-      "title": "breakingk bad",
+      "title": "Hamburger",
       "price": 200,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/6.jpg",
+      "description": "fast food..."
     },
     {
       "id": "3",
-      "title": "breakingk bad",
+      "title": "Fried chicken",
       "price": 300,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/3.webp",
+      "description": "fast food..."
     },
     {
       "id": "4",
-      "title": "breakingk bad",
+      "title": "Hot dog",
       "price": 500,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/4.jpg",
+      "description": "fast food..."
     },
     {
       "id": "5",
-      "title": "breakingk bad",
+      "title": "Pizza",
       "price": 4600,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/5.webp",
+      "description": "fast food..."
     },
     {
       "id": "6",
-      "title": "breakingk bad",
+      "title": "Caesar salad",
       "price": 4400,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/2.jpg",
+      "description": "fast food..."
     },
     {
       "id": "7",
-      "title": "breakingk bad",
+      "title": "Pizza",
       "price": 4003,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/7.webp",
+      "description": "fast food..."
     },
     {
       "id": "8",
-      "title": "breakingk bad",
+      "title": "Pizza",
       "price": 6400,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/8.webp",
+      "description": "fast food..."
     },
     {
       "id": "9",
-      "title": "breakingk bad",
+      "title": "Caesar salad",
       "price": 4700,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/9.jpg",
+      "description": "fast food..."
     },
     {
       "id": "10",
-      "title": "breakingk bad",
+      "title": "Hamburger",
       "price": 1400,
-      "image": "/src/assets/images/whalter.jpg",
-      "description": "breakink bad is a series about Walter White"
+      "image": "/src/assets/images/6.jpg",
+      "description": "fast food..."
     }
   ]
 }

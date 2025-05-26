@@ -3,7 +3,6 @@ import { useShoppingCartContext } from "../../context/ShoppingCartContext";
 
 function Login() {
   const { handleLogin } = useShoppingCartContext();
-
   const [user, setUser] = useState({
     username: "",
     password: "",
@@ -17,8 +16,8 @@ function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen place-content-center pb-40 ">
-      <div className="bg-teal-700 p-10 rounded grid w-3/4 sm:w-3/4 md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-2/5 hover:bg-teal-500 transition hover:shadow-black shadow-md">
+    <div className="flex items-center bg-white justify-center h-screen place-content-center pb-40 ">
+      <div className="bg-red-500  p-10 rounded grid w-3/4 sm:w-3/4 md:w-2/5 lg:w-2/5 xl:w-2/5 2xl:w-2/5  transition hover:shadow-black shadow-md">
         <input
           type="text"
           placeholder="نام کاربری"

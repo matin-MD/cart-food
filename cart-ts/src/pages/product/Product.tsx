@@ -24,7 +24,7 @@ function Product() {
     <>
       <div className="grid justify-center items-center content-center pt-28 ">
         <div className="transition rounded-lg ">
-          <div className="transition-all  text-right pb-2 border-2 hover:border-2 border-neutral-700 hover:text-white text-white hover:border-neutral-900  bg-neutral-700  hover:bg-black  rounded-lg ">
+          <div className="transition-all  text-right pb-2 border-2 hover:border-2 border-orange-500 hover:text-white text-white hover:border-orange-600  bg-orange-500  hover:bg-orange-600  rounded-lg ">
             <img src={product?.image} className="h-52  rounded-t-lg " />
             <div className="text-left pl-2 mx-5">
               <div className="pt-3 ">{product?.title}</div>
@@ -53,7 +53,7 @@ function Product() {
                                 parseInt(params.id as string)
                               );
                             }}
-                            className="grid justify-center rounded-md text-xl  py-2 px-5  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-blue-800  hover:bg-blue-700 items-center place-content-center"
+                            className="grid justify-center rounded-md text-xl  py-2 px-5  shadow-blue-200 shadow-sm hover:shadow-md hover:shadow-blue-100 bg-green-600  hover:bg-green-500 items-center place-content-center"
                           >
                             +
                           </button>
