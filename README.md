@@ -17,3 +17,4 @@ npm run dev
 
 :JSON Server (دریک ترمینال جدا)اجرا
 npx json-server data/db.json -p 9001
+
